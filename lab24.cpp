@@ -1,15 +1,17 @@
+
 #include<iostream>
 using namespace std;
 class student
 {
    int clno,mark;
+  char name[20];
    public:
    void accept();
    void display();
 };
 void student::accept(){
 
-cout<<enter class number,name,mark";
+cout<<"enter class number,name,mark";
 cin>>clno>>name>>mark;
 }
 void student::display(){
