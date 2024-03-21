@@ -1,50 +1,53 @@
 #include<iostream>
-#include<string.h>
 using namespace std;
-class student
-{
- int clno,mark;
- char name[20],school[10];
+class one {
+ int m;
  public:
- student();
- student(int);
- student(student &); 
- void calc();
- void display();
+one();
+one(one &);
+one(int);
 };
-student::student()
-{
- strcpy(school,"GBHSS Aluva")
+class two{
+  int *p,n,i;
+  public:
+  two();
+ };
+ two::two(){
+    cout<<"Dynamic Constructor"<<endl;
+    cout<<"enter the number of elements int array":
+    cin>>n;
+    p=new int[n];
+    cout<<"enter the values";
+    for(i=0;i<n;i++){
+       cin>>p[i];
+    }
+     cout<<"entered values"<<endl;
+     for(i=0;i<n;i++){ 
+     cout<<p[i]<<endl;
+   } 
 }
-student::student(int k,char s[10],int i)
-{
- clno
-}
-student::student(student &r)
-{
- clno=r.clno;
- mark=r.mark;
- strcpy(name,r.name);
-}
-void student::calc()
-{
- int n;
- cout<<"enter the grace mark";
- cin>>n;
- mark=mark+n;
-}
-void student::display()
-{
- cout<<clno<<name<<mark;
-}
+  one::one(one &t)
+  {
+    cout<<"copyconstructor"<<endl;
+    m=m.t;
+    cout<<"copied value"<<m;
+  } 
+  one::one(int k)
+  {
+     m=k;
+     cout<<"parameterzid constructor";
+     cout<<"the value you given as parameter:"<<m<<endl;
+  }
+  one::one()
+  {
+    m=10;
+    cout<<:"Default value of m"<<m;
+  }
 int main()
 {
- student s(1,"sachin",22);
- student n(s);
- n.calc();
- cout<<"details of mark scored";
- s.display();
- cout<<"details with grace mark";
- n.display();
- return 0;
-}
+  one a;
+  one d(a);
+  one b(10);
+  two c;
+  return 0;
+} 
